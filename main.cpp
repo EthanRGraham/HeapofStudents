@@ -59,6 +59,7 @@ int main) {
 		} else if (choice == "3") {
 			findStudent(students);
 		} else if (choice == "0") {
+			students.clear();
 			std::cout << "Goodbye!" << std::endl;
 		} else {
 			std::cout << "Invalid option." << std::endl;

@@ -19,7 +19,7 @@ void Date::init(std::string dateString){
 	std::string sYear;
 
 	ss.clear();
-	ss/str(dateString);
+	ss.str(dateString);
 
 	getline(ss, sMonth, '/');
 	getline(ss, sDay, '/');

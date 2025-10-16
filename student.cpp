@@ -5,6 +5,7 @@
 #include "date.h"
 #include "address.h"
 
+
 Student::Student(){
 	studentString = "";
 	firstName = "";
