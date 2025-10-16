@@ -1,11 +1,79 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+#include "student.h"
 #include "date.h"
 #include "address.h"
-#include "student.h"
 
+
+int menu(){
+	std::string input;
+
+	std::cout << "\n===========================" << std::endl;
+	std::cout << "0. Quit" << std::endl;
+	std::cout << "1. Print all student names" << std::endl;
+	std::cout << "2. Print all student data" << std::endl;
+	std::cout << "3. Find a student" << std::endl;
+	std:: << "===========================" << std::endl;
+	
+	std::getline(std::cin, input);
+	return input;
+}//end menu
+
+
+void loadStudents(std::vector<Student*>& students){
+	std::ifstream inFile;
+	std::string currentLine;
+
+	inFile.open("students.csv");
+	while(getline(inFile, currentline)){
+		Student* s = new Student;
+		s->init(currentLine);
+		students.push_back(s);
+	}// end while
+	inFile.close();
+}//end loadStudents
+
+void ShowStudentNames(std::vector<Student*>& students){
+	for (Student* student: students){
+		std::cout << student->getLastFirst();
+		std::cout << ", " << student->getCreditHours() << std::endl;
+	}//end for
+}//end ShowStudentNames
+
+
+int main) {
+	std::vector<Student*> students;
+	std::string choice = "";
+	std::cout << "Student Database" << std::endl;
+
+	while (choice != "0") {
+		choice = menu();
+
+		if (choice == "1") {
+			ShowStudentNames(students);
+		} else if (choice == "2") {
+			printStudents(students);
+		} else if (choice == "3") {
+			findStudent(students);
+		} else if (choice == "0") {
+			std::cout << "Goodbye!" << std::endl;
+		} else {
+			std::cout << "Invalid option." << std::endl;
+		}
+	} //end while
+	delStudents(students);
+	return 0;
+} //end main
+
+
+/*
 void testAddress();
 void testDate();
 void testStudent();
+
 
 int main(){
   std::cout << "Hello!" << std::endl;
@@ -36,3 +104,5 @@ void testStudent(){
   std::cout << student->getLastFirst();
   delete student;
 } // end testStudent
+  */
+
