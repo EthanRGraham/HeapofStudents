@@ -1,17 +1,30 @@
 ----------------------------------------------------------------------------------------------------------
-# main
+# main.cpp
+## main
 
 int main (){
-
+figure out student vector. 
 std::string choice = "";
 
-while choice != "0" {
-    choice = menu()
+while (choice != "0") {
+    choice = menu();
 
     if choice == "1"  (choice == "1") {
         showStudentNames(students);
    } else if choice == "2"
+        printStudents
+    if choice == 3 
+findstudents
+    ...
 
+if choice == "0"
+    "goodbye"
+else:
+ cout "invalid option"
+
+
+clean up before exiting the loop 
+delStudents(Students);
 # menu
 
 int  menu(): 
