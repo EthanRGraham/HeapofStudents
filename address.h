@@ -8,11 +8,10 @@ class Address{
 	std::string street;
 	std::string city;
 	std::string state;
-	std string zip;
+	std::string zip;
 
 	public:
 	Address();
-	void init (std::string street, std::string city,
-			std::string state, std:: string zip);
+	void init (std::string street, std::string city, std::string state, std::string zip);
 	void printAddress();
-} // end Address class def
+}; // end Address class def

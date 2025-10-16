@@ -18,7 +18,7 @@ class Student{
 	public:
 		Student();
 		~Student();
-		void init(std::studentString);
+		void init(std::string studentString);
 		void printStudent();
 		std::string getFirstName();
 		std::string getLastName();

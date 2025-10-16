@@ -1,7 +1,20 @@
 ----------------------------------------------------------------------------------------------------------
+# main
+
+int main (){
+
+std::string choice = "";
+
+while choice != "0" {
+    choice = menu()
+
+    if choice == "1"  (choice == "1") {
+        showStudentNames(students);
+   } else if choice == "2"
+
 # menu
 
-string menu():
+int  menu(): 
     prints out the menu of options
 
 0 quit 
